@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.eb-garamond-normal {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes fadeBackground {
+    0%, 45%   { opacity: 1; }
+    50%, 95%  { opacity: 0; }
+    100%      { opacity: 1; }
+}
+
+.fade {
+    animation: fadeBackground 10s infinite;
+    transition: opacity 2s ease-in-out;
+}
+
+@keyframes rotateStars {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes starsDrift {
+    from { background-position: 0 0; }
+    to   { background-position: 0 1000px; }
+}
+.stars {
+    animation: rotateStars 300s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes snowFallSlow {
+    from { background-position: 0 0; }
+    to   { background-position: 0 1000px; }
+}
+@keyframes snowFallMedium {
+    from { background-position: 0 0; }
+    to   { background-position: -1000px 2000px; }
+}
+@keyframes snowFallFast {
+    from { background-position: 0 0; }
+    to   { background-position: -3000px 3000px; }
+}
+
+.snow-layer-1 {
+    animation: snowFallSlow 40s linear infinite;
+}
+.snow-layer-2 {
+    animation: snowFallMedium 20s linear infinite;
+}
+.snow-layer-3 {
+    animation: snowFallFast 10s linear infinite;
+}
+
+.snow-layer-1,
+.snow-layer-2,
+.snow-layer-3 {
+    background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+    filter: invert(0.3); /* makes white snow dark */
+}
+
+@keyframes shimmer-slow {
+  0% { transform: translateX(-250%) rotate(-12deg); }
+  100% { transform: translateX(250%) rotate(-12deg); }
+}
+
+.animate-shimmer-slow {
+  animation: shimmer-slow 6s infinite linear;
+}
