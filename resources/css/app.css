@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+.eb-garamond-bold {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
 @keyframes fadeBackground {
     0%, 45%   { opacity: 1; }
     50%, 95%  { opacity: 0; }
@@ -64,10 +71,102 @@
 }
 
 @keyframes shimmer-slow {
-  0% { transform: translateX(-250%) rotate(-12deg); }
-  100% { transform: translateX(250%) rotate(-12deg); }
+  0% { transform: translateX(-500%) rotate(-12deg); }
+  100% { transform: translateX(500%) rotate(-12deg); }
 }
 
 .animate-shimmer-slow {
   animation: shimmer-slow 6s infinite linear;
+}
+
+.scroll-card-wrapper {
+  perspective: 1000px;
+}
+
+.tilt-card {
+  transition: transform 0.15s ease-out;
+  transform-style: preserve-3d;
+}
+
+.tilt-card-wrapper {
+  perspective: 1000px;
+}
+
+.neon-text-dark {
+    font-weight: bold;
+    color: #6962d1; /* main neon color */
+    text-shadow:
+    0 0 5px #6962d1,
+    0 0 10px #6962d1,
+    0 0 20px rgba(105, 64, 122, 1),
+    0 0 40px rgba(105, 64, 122, 1),
+    0 0 80px rgba(105, 64, 122, 1);
+    animation: flickerDark 3s;
+}
+
+@keyframes flickerDark {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+        0 0 5px #6962d1,
+        0 0 10px #6962d1,
+        0 0 20px rgba(105, 64, 122, 1),
+        0 0 40px rgba(105, 64, 122, 1),
+        0 0 80px rgba(105, 64, 122, 1);
+    opacity: 1;
+    }
+    20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.4;
+    }
+}
+
+.neon-text-light {
+    font-weight: bold;
+    color: #404ea6; /* main neon color */
+    text-shadow:
+    0 0 5px #404ea6,
+    0 0 10px #404ea6,
+    0 0 20px rgba(169, 183, 252, 1),
+    0 0 40px rgba(169, 183, 252, 1),
+    0 0 80px rgba(169, 183, 252, 1);
+    animation: flickerLight 3s;
+}
+
+@keyframes flickerLight {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+        0 0 5px #404ea6,
+        0 0 10px #404ea6,
+        0 0 20px rgba(169, 183, 252, 1),
+        0 0 40px rgba(169, 183, 252, 1),
+        0 0 80px rgba(169, 183, 252, 1);
+    opacity: 1;
+    }
+    20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.4;
+    }
+}
+
+@keyframes spin-out {
+0%   { transform: rotate(0deg); opacity: 1; }
+100% { transform: rotate(360deg); opacity: 1; }
+}
+
+@keyframes spin-in {
+0%   { transform: rotate(-360deg); opacity: 1; }
+100% { transform: rotate(0deg); opacity: 1; }
+}
+
+.spin-out {
+animation: spin-out 0.5s ease-in-out;
+}
+
+.spin-in {
+animation: spin-in 0.5s ease-in-out;
+}
+
+#shimmer {
+  filter: blur(30px);
+  transform: translate(-50%, -50%) rotate(-12deg);
 }

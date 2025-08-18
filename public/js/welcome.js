@@ -1,22 +1,23 @@
-const toggle = document.getElementById('dark-mode-toggle');
-const html = document.documentElement;
+const wrappers = document.querySelectorAll('.tilt-card-wrapper');
 
-// Check local storage on page load
-if(localStorage.getItem('dark') === 'true') {
-    html.classList.add('dark');
-}
+wrappers.forEach(wrapper => {
+  const card = wrapper.querySelector('.tilt-card');
 
-toggle.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    localStorage.setItem('dark', html.classList.contains('dark'));
-});
+  wrapper.addEventListener('mousemove', (e) => {
+    const rect = wrapper.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
 
-const card = document.getElementById('glassCard');
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const wobble = Math.sin(scrollY / 100) * 5; // wobble intensity
-    const scaleX = 1 + wobble * 0.01;
-    const scaleY = 1 - wobble * 0.01;
-    const rotate = wobble * 0.2;
-    card.style.transform = `scaleX(${scaleX}) scaleY(${scaleY}) rotate(${rotate}deg)`;
+    // calculate rotation (-15deg to +15deg)
+    const rotateX = ((y - centerY) / centerY) * -15;
+    const rotateY = ((x - centerX) / centerX) * 15;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  wrapper.addEventListener('mouseleave', () => {
+    card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+  });
 });
