@@ -1,6 +1,6 @@
 
 
-<h1 align="center">Bienvenue! Je suis Cédric Fortier<img src="https://raw.githubusercontent.com/paniccut/paniccut/main/gifs/wave.gif" width="30px"></h1> 
+<h1 align="center">Bienvenue! Je suis Cédric Fortier<img src="https://raw.githubusercontent.com/paniccut/paniccut/tree/main/gifs/wave.gif" width="30px"></h1> 
 <p align="center">
     Je suis étudiant au Cégep de Sherbrooke et développeur full-stack aspirant! 😄
 </p>
