@@ -7,6 +7,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 // Gestion cartes de vitre
+//  Rotate
 const cards = document.querySelectorAll('.glassCardRotate');
 
 cards.forEach(card => {
@@ -17,6 +18,7 @@ cards.forEach(card => {
     });
 });
 
+//  Shimmer on hover
 const glassCards = document.querySelectorAll('.glass');
 
 glassCards.forEach(card => {
@@ -30,16 +32,16 @@ glassCards.forEach(card => {
         let offsetX = 0;
         let offsetY = 0;
         if (card.tagName === 'BUTTON') {
-            offsetX = 70;
-            offsetY = 70
+            offsetX = 50;
+            offsetY = 45
         }
         else if (card.classList.contains('dropdown')) {
-            offsetX = 70;
-            offsetY = 70;
+            offsetX = 60;
+            offsetY = 60;
         }
         else {
-            offsetX = 150;
-            offsetY = 150;
+            offsetX = 135;
+            offsetY = 135;
         }
         x -= offsetX;
         y -= offsetY;

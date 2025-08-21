@@ -13,7 +13,7 @@ $classes = ($rotate ?? false)
             <div class="absolute top-0 left-0 w-72 h-full bg-gradient-to-br from-white/0 via-white/20 to-white/0 blur-2xl transform -rotate-12 animate-shimmer-slow"></div>
         </div>
 
-        <div class="shimmer absolute w-32 h-32 bg-gradient-to-br from-white/0 via-white/50 to-white/0 blur-2xl overflow-hidden rounded-full pointer-events-none opacity-0 transition-opacity duration-150"></div>
+        <div class="shimmer absolute w-24 h-24 bg-gradient-to-br inset-0 from-white/0 via-white/30 to-white/0 blur-2xl overflow-hidden rounded-full pointer-events-none opacity-0 transition-opacity duration-150"></div>
 
         {{ $slot }}
     </div>

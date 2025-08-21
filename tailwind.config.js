@@ -30,7 +30,7 @@ export default {
                 },
                 shadowFadeInDay: {
                     '0%': { filter: 'drop-shadow(0 0 0 rgba(169, 183, 252, 0))' },
-                    '100%': { filter: 'drop-shadow(0 0 90px rgba(169, 183, 252, 1))' },
+                    '100%': { filter: 'drop-shadow(0 0 90px rgba(130, 151, 255, 1))' },
                 },
             },
             animation: {

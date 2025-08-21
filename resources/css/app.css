@@ -67,7 +67,7 @@
 .snow-layer-2,
 .snow-layer-3 {
     background-image: url('https://www.transparenttextures.com/patterns/snow.png');
-    filter: invert(0.3); /* makes white snow dark */
+    filter: invert(0.2); /* makes white snow dark */
 }
 
 @keyframes shimmer-slow {
