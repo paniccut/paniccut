@@ -2,7 +2,7 @@
 
 <h1 align="center">Bienvenue! Je suis Cédric Fortier <img src="gifs/wave.gif" width="36px"></h1> 
 <p align="center">
-    Je suis étudiant au Cégep de Sherbrooke et développeur full-stack aspirant! 😄
+    Je suis étudiant et développeur full-stack aspirant! 😄
 </p>
 
 <br>
