@@ -2,11 +2,10 @@
 
 <h1 align="center">Bienvenue! Je suis Cédric Fortier <img src="gifs/wave.gif" width="36px"></h1> 
 <p align="center">
-    Je suis étudiant et développeur full-stack aspirant! 😄
+    Je suis étudiant et développeur full-stack aspirant! 😄<br>
+    Aussi connu sous le nom <code>paniccut</code>
 </p>
-
 <br>
-
 <p align="center">
     <img alt = "GitHub Streaks" src="https://github-readme-streak-stats.herokuapp.com/?user=paniccut&theme=material-palenight&hide_border=true">
 </p>
